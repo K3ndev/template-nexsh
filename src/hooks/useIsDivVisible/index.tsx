@@ -26,6 +26,7 @@ export function useIsDivVisible({
   const [isDivVisible, setIsDivVisible] = useState(false);
 
   useEffect(() => {
+    const currentDivRef = divRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsDivVisible(entry.isIntersecting);
@@ -33,15 +34,16 @@ export function useIsDivVisible({
       { root: null, rootMargin: "0px", threshold: threshold }
     );
 
-    if (divRef.current) {
-      observer.observe(divRef.current);
+    if (currentDivRef) {
+      observer.observe(currentDivRef);
     }
 
     return () => {
-      if (divRef.current) {
-        observer.unobserve(divRef.current);
+      if (currentDivRef) {
+        observer.unobserve(currentDivRef);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [divRef]);
 
   return isDivVisible;
