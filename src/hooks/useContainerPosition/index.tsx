@@ -2,20 +2,21 @@ import { useState, useEffect } from "react";
 import { useContainerPositionType } from "./types";
 
 /**
- * Custom hook that tracks the Y position of the target element
+ * Custom hook that tracks the position of the target element
  *
  * @returns {useContainerPositionType}
  *
  * @example
  * // Usage example:
  * const containerRef = useRef<HTMLDivElement>(null);
- * const { positionY } = useContainerPosition({ containerRef });
+ * const { positionY, positionYLast } = useContainerPosition({ containerRef });
  */
 
 export function useContainerPosition({
   containerRef,
 }: useContainerPositionType): {
   positionY: number;
+  positionYLast: any;
 } {
   const [positionY, setPositionY] = useState<number>(0);
 
@@ -32,5 +33,7 @@ export function useContainerPosition({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { positionY };
+  const positionYLast = containerRef?.current?.clientHeight || 1;
+
+  return { positionY, positionYLast: positionY + positionYLast - 1 };
 }
