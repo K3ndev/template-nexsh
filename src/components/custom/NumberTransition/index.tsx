@@ -20,11 +20,11 @@ import { NumberTransitionProps } from "./types";
  *  />
  */
 
-export function NumberTransition  ({
+export function NumberTransition({
   from,
   to,
   duration,
-  className,
+  className = "",
   threshold,
 }: NumberTransitionProps) {
   const [value, setValue] = useState(from);
@@ -68,4 +68,4 @@ export function NumberTransition  ({
       <span ref={containerRef}>{value}</span>
     </div>
   );
-};
+}
