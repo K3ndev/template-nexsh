@@ -81,7 +81,7 @@
 /* Layout template you can use */
 /* It will split the header, main, and footer similar to a hamburger menu */
 #__next {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
