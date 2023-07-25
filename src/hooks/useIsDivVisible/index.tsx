@@ -29,7 +29,9 @@ export function useIsDivVisible({
     const currentDivRef = divRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsDivVisible(entry.isIntersecting);
+        if (entry) {
+          setIsDivVisible(entry.isIntersecting);
+        }
       },
       { root: null, rootMargin: "0px", threshold: threshold }
     );

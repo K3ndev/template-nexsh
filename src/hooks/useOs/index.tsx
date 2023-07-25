@@ -15,7 +15,7 @@ export function useOs() {
       // Check if the property is available before accessing it
       if (window.navigator && window.navigator.platform) {
         const firstWord = window.navigator.platform.split(" ")[0];
-        setOs(firstWord);
+        setOs(firstWord as string);
       } else {
         console.log("Platform information not available.");
         setOs("undetermined");
@@ -23,5 +23,5 @@ export function useOs() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return os;
+  return os || "undetermined";
 }
