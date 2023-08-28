@@ -1,6 +1,6 @@
 import React from "react";
 import { LayoutProps } from "./types";
-import { Footer, Header } from "@/components/custom/index";
+import { Footer, Header } from "@/shared/components/custom/index";
 
 export function Layout(props: LayoutProps) {
   return (

@@ -1,4 +1,4 @@
-import { useIsDivVisible } from "@/hooks";
+import { useIsDivVisible } from "@/shared/hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { NumberTransitionProps } from "./types";
 
