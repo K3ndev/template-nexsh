@@ -1,6 +1,6 @@
 # Next Template, Typescript, tailwind, and more
 
-This template is designed to help you kickstart your Next.js projects with the following libraries and tools: Next.js, TypeScript, Tailwind CSS, Shacdn-ui components, Husky for Git hooks, AOS for animations, and ESLint for code linting.
+This template is designed to help you kickstart your Next.js projects with the following libraries and tools: Next.js, TypeScript, Tailwind CSS, Shacdn-ui components, Husky for Git hooks, AOS for animations, zod for validation, tanstack-query for asynchronous state management, and ESLint for code linting.
 
 ### Folder Structure
 
