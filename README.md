@@ -53,4 +53,4 @@ Open [http://localhost:3000](http://localhost:3000/) with your browser to see th
 
 * Create `login.tsx` for authentication readiness.
 * Add sst setup
-* Transition to using Rome instead of ESLint.
+* Transition to using biome instead of ESLint and Prettier.
