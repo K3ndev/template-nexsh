@@ -48,6 +48,27 @@ Open [http://localhost:3000](http://localhost:3000/) with your browser to see th
 * This template uses shacdn-ui, just add the component then youre good to go
 * Use aos library to add elegant animations
 * Husky is configured to run pre-commit hooks, ensuring code quality before each commit
+* CSS Layout Template
+```css
+/* Layout template you can use */
+/* It will split the header, main, and footer similar to a hamburger menu */
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 0%;
+}
+
+/* CSS debugger */
+* {
+  box-sizing: border-box;
+  outline: 1px solid limegreen !important;
+}
+
+```
 
 #### Next Goal
 
