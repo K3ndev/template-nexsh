@@ -52,7 +52,7 @@ Open [http://localhost:3000](http://localhost:3000/) with your browser to see th
 ```css
 /* Layout template you can use */
 /* It will split the header, main, and footer similar to a hamburger menu */
-#root {
+#__next {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
